@@ -45,3 +45,21 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.menu-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-item img {
+    border-radius: 10px;
+}
+.menu-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
