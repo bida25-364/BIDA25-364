@@ -1,86 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Eats - Foodie Website</title>
-    <!-- Link your CSS file -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Optional: Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+/* ===== GENERAL BODY STYLING ===== */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* upgraded font for modern look */
+    margin: 0;
+    background: #fff5e6; /* warm, foodie-style background */
+    color: #333;
+}
 
-    <!-- ===== HEADER ===== -->
-    <header>
-        <h1>Urban Eats</h1>
-    </header>
+/* ===== HEADER ===== */
+header {
+    background: #ff6b6b; /* changed from dark gray to appetizing red */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Contact Us</a>
-    </nav>
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+    background-color: #ff6b6b;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <h2>Welcome to Urban Eats</h2>
-        <p>Delicious food, fresh flavors, and an unforgettable experience!</p>
-        <button>Order Now</button>
-    </section>
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+}
 
-    <!-- ===== ABOUT / CONTENT SECTION ===== -->
-    <section class="content" id="about">
-        <div>
-            <img src="../images/chef.jpg" alt="Chef cooking">
-        </div>
-        <div>
-            <h2>About Us</h2>
-            <p>Urban Eats brings you the finest dishes from local and international cuisines. Our chefs are passionate about flavor, freshness, and presentation.</p>
-            <p>Whether it’s a quick bite or a full dining experience, we make every meal memorable!</p>
-        </div>
-    </section>
+nav a:hover {
+    color: #ffe66d; /* yellow hover for contrast */
+    transform: scale(1.1);
+}
 
-    <!-- ===== MENU SECTION ===== -->
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-container">
-            <div class="menu-item">
-                <img src="../images/pizza.jpg" alt="Delicious Pizza">
-                <h3>Margherita Pizza</h3>
-                <p>Classic pizza topped with fresh mozzarella, tomatoes, and basil.</p>
-            </div>
-            <div class="menu-item">
-                <img src="../images/burger.jpg" alt="Juicy Burger">
-                <h3>Beef Burger</h3>
-                <p>Juicy beef patty with fresh lettuce, tomato, and our special sauce.</p>
-            </div>
-            <div class="menu-item">
-                <img src="../images/pasta.jpg" alt="Creamy Pasta">
-                <h3>Creamy Pasta</h3>
-                <p>Delicious pasta in a rich creamy sauce with parmesan and herbs.</p>
-            </div>
-            <div class="menu-item">
-                <img src="../images/salad.jpg" alt="Fresh Salad">
-                <h3>Fresh Salad</h3>
-                <p>Crisp vegetables with a light vinaigrette, perfect for a healthy choice.</p>
-            </div>
-        </div>
-    </section>
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ffe66d;
+    transition: width 0.3s;
+}
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p style="text-align:center;">Email: info@urbaneats.com | Phone: +267 123 4567</p>
-        <p style="text-align:center;">Follow us on social media: Facebook | Instagram | Twitter</p>
-    </section>
+nav a:hover::after {
+    width: 100%;
+}
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>&copy; 2026 Urban Eats. All Rights Reserved.</p>
-    </footer>
+/* ===== HERO SECTION ===== */
+.hero {
+    background: url('../images/food.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
+    padding: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2); /* dark overlay for text readability */
+}
 
-</body>
-</html>
+/* ===== CONTENT SECTION ===== */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.content img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== MENU CARDS ===== */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.menu-item {
+    background: #fff;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ===== BUTTON STYLING (if any buttons exist) ===== */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #1dd1a1;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #10ac84;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #ff6b6b; /* matches header/nav color for cohesion */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
