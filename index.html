@@ -3,37 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Eats</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Urban Eats - Foodie Website</title>
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-    <h1>Urban Eats</h1>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>Urban Eats</h1>
+    </header>
+
+    <!-- ===== NAVIGATION ===== -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact Us</a>
     </nav>
-</header>
-<section class="hero">
-    <h2>Welcome to Urban Eats</h2>
-    <p>Fresh, Delicious, Affordable Meals</p>
-</section>
 
-<section class="content">
-    <img src="images/food.jpg" width="300">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <h2>Welcome to Urban Eats</h2>
+        <p>Delicious food, fresh flavors, and an unforgettable experience!</p>
+        <button>Order Now</button>
+    </section>
 
-    <div>
-        <h2>Our Story</h2>
-        <p>We serve the best meals in town with fresh ingredients.</p>
-    </div>
-</section>
+    <!-- ===== ABOUT / CONTENT SECTION ===== -->
+    <section class="content" id="about">
+        <div>
+            <img src="../images/chef.jpg" alt="Chef cooking">
+        </div>
+        <div>
+            <h2>About Us</h2>
+            <p>Urban Eats brings you the finest dishes from local and international cuisines. Our chefs are passionate about flavor, freshness, and presentation.</p>
+            <p>Whether it’s a quick bite or a full dining experience, we make every meal memorable!</p>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Urban Eats | All rights reserved</p>
-</footer>
+    <!-- ===== MENU SECTION ===== -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="../images/pizza.jpg" alt="Delicious Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza topped with fresh mozzarella, tomatoes, and basil.</p>
+            </div>
+            <div class="menu-item">
+                <img src="../images/burger.jpg" alt="Juicy Burger">
+                <h3>Beef Burger</h3>
+                <p>Juicy beef patty with fresh lettuce, tomato, and our special sauce.</p>
+            </div>
+            <div class="menu-item">
+                <img src="../images/pasta.jpg" alt="Creamy Pasta">
+                <h3>Creamy Pasta</h3>
+                <p>Delicious pasta in a rich creamy sauce with parmesan and herbs.</p>
+            </div>
+            <div class="menu-item">
+                <img src="../images/salad.jpg" alt="Fresh Salad">
+                <h3>Fresh Salad</h3>
+                <p>Crisp vegetables with a light vinaigrette, perfect for a healthy choice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">Email: info@urbaneats.com | Phone: +267 123 4567</p>
+        <p style="text-align:center;">Follow us on social media: Facebook | Instagram | Twitter</p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 Urban Eats. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
+
