@@ -1,20 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
+    background: #333;
     color: white;
     padding: 15px;
     text-align: center;
 }
 
 nav a {
-    color: white;
     margin: 10px;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -22,19 +22,26 @@ nav a:hover {
 }
 
 .hero {
-    padding: 50px;
-    text-align: center;
-    background-color: #ff9800;
+    background: url('../images/food.jpg') no-repeat center;
+    background-size: cover;
     color: white;
+    padding: 80px;
+    text-align: center;
 }
 
-section {
+.content {
+    display: flex;
     padding: 20px;
+    gap: 20px;
+}
+
+.content img {
+    border-radius: 10px;
 }
 
 footer {
-    text-align: center;
-    background-color: #333;
+    background: black;
     color: white;
+    text-align: center;
     padding: 10px;
 }
